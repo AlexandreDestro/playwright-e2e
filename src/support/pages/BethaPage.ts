@@ -17,7 +17,7 @@ export default class CadastroPage extends BasePage {
     await this.bethaElements.getCampoNomeUser().fill(faker.person.firstName());
     await this.bethaElements.getCampoNome().fill(faker.person.firstName());
     // await this.bethaElements.getCampoCpf().fill('33223745050');
-    await this.bethaElements.getCampoEmail().fill('a@b.com.br');
+    await this.bethaElements.getCampoEmail().fill(faker.internet.email());
     // await this.bethaElements.getCampoWhatsapp().fill('48 999998888');
     // await this.bethaElements.getCampoCep().fill('88817070');
     // await this.bethaElements.getBotaoBuscarCep().click();
@@ -27,7 +27,7 @@ export default class CadastroPage extends BasePage {
     await this.bethaElements
       .getCampoAnexo()
       .setInputFiles('src/support/fixtures/cnh_testes.jpg');
-    await this.bethaElements.getBotaoCadastrar().click();
+    await this.bethaElements.getBotaoCriarconta().click();
   }
 
   // async preencherFormularioInvalido(): Promise<void> {

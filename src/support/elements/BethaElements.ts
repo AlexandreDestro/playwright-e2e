@@ -7,8 +7,8 @@ export default class BethaElements extends BaseElements {
     this.page = page;
   }
 
-  getBotaoNovoCadastro(): Locator {
-    return this.page.locator('text=Cadastro de Usuário');
+  getBotaoCriarconta(): Locator {
+    return this.page.locator('text=Criar Conta');
   }
 
   getCampoNome(): Locator {
