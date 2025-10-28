@@ -13,10 +13,10 @@ export default class CadastroPage extends BasePage {
   }
 
   async preencherFormulario(): Promise<void> {
-    // await this.bethaElements.getBotaoNovoCadastro().click();
+    await this.bethaElements.getBotaoCriarconta().click();
     await this.bethaElements.getCampoNomeUser().fill(faker.person.firstName());
     await this.bethaElements.getCampoNome().fill(faker.person.firstName());
-    // await this.bethaElements.getCampoCpf().fill('33223745050');
+    // await this.bethaElements.getCampoCpf().fill('33223745050');aa
     await this.bethaElements.getCampoEmail().fill(faker.internet.email());
     // await this.bethaElements.getCampoWhatsapp().fill('48 999998888');
     // await this.bethaElements.getCampoCep().fill('88817070');

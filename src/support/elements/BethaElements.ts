@@ -6,14 +6,19 @@ export default class BethaElements extends BaseElements {
     super(page);
     this.page = page;
   }
-
+//aqui
   getBotaoCriarconta(): Locator {
-    return this.page.locator('text=Criar Conta');
+    return this.page.locator('text=Crie uma.');
+  }
+  getCampoNomeUser(): Locator {
+    return this.page.locator('input[name="mainForm:nome"]');
+  }
+  getCampoNome(): Locator {
+    return this.page.locator('input[name="mainForm:iUsuarios"]');
   }
 
-  getCampoNome(): Locator {
-    return this.page.locator('input[name="name"]');
-  }
+
+  
 
   getCampoCpf(): Locator {
     return this.page.locator('input[name="cpf"]');
@@ -50,8 +55,5 @@ export default class BethaElements extends BaseElements {
   getCampoAnexo(): Locator {
     return this.page.locator('input[type="file"]');
   }
-// aaa
-  getCampoNomeUser(): Locator {
-    return this.page.locator('text=Usuário de conexão:');
-  }
+
 }

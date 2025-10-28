@@ -1,22 +1,22 @@
 import { test } from '@playwright/test';
 import { join } from 'path';
 import { TheConfig } from 'sicolo';
-import CadastroPage from '../support/pages/BethaPage';
+import BethaPage from '../support/pages/BethaPage';
 
 test.describe('Cadastro de usuário', () => {
   const CONFIG = join(__dirname, '../support/fixtures/config.yml');
-  let cadastroPage: CadastroPage;
+  let bethaPage: BethaPage;
   const BASE_URL = TheConfig.fromFile(CONFIG)
     .andPath('application.betha_url')
     .retrieveData();
 
   test.beforeEach(async ({ page }) => {
-    cadastroPage = new CadastroPage(page);
+    bethaPage = new BethaPage(page);
     await page.goto(BASE_URL);
   });
 
   test('Preencher formulário de cadastro', async () => {
-    await cadastroPage.preencherFormulario();
+    await bethaPage.preencherFormulario();
     // await cadastroPage.validarCadastro();
   });
 
