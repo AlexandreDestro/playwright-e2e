@@ -1,5 +1,5 @@
 application:
-  base_url: "https://google.com"
+  betha_url: "https://e-gov.betha.com.br/centraldousuario/novousuario.faces"
   automationpractice_QA: "http://www.automationpractice.pl/index.php"  
   bugereats_QA: "https://buger-eats.vercel.app/" 
   sauceDemo: "https://www.saucedemo.com/"
