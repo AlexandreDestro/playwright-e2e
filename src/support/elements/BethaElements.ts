@@ -1,14 +1,14 @@
 import { Locator, Page } from '@playwright/test';
 import BaseElements from './BaseElements';
 
-export default class CadastroElements extends BaseElements {
+export default class BethaElements extends BaseElements {
   constructor(readonly page: Page) {
     super(page);
     this.page = page;
   }
 
   getBotaoNovoCadastro(): Locator {
-    return this.page.locator('text=Cadastre-se para fazer entregas');
+    return this.page.locator('text=Cadastro de Usuário');
   }
 
   getCampoNome(): Locator {
@@ -50,18 +50,8 @@ export default class CadastroElements extends BaseElements {
   getCampoAnexo(): Locator {
     return this.page.locator('input[type="file"]');
   }
-
-  getBotaoCadastrar(): Locator {
-    return this.page.locator('button[type="submit"]');
-  }
-
-  getMessageOK(): Locator {
-    return this.page.locator(
-      'text=Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato.'
-    );
-  }
-
-  getValidarCNH(): Locator {
-    return this.page.locator('text=Adicione uma foto da sua CNH');
+// aaa
+  getCampoNomeUser(): Locator {
+    return this.page.locator('text=Usuário de conexão:');
   }
 }
