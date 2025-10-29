@@ -19,41 +19,27 @@ export default class BethaElements extends BaseElements {
 
 
   
-
-  getCampoCpf(): Locator {
-    return this.page.locator('input[name="cpf"]');
-  }
-
   getCampoEmail(): Locator {
-    return this.page.locator('input[name="email"]');
+    return this.page.locator('input[name="mainForm:email"]');
   }
 
-  getCampoWhatsapp(): Locator {
-    return this.page.locator('input[name="whatsapp"]');
+
+  getCampoSenha(): Locator {
+    return this.page.locator('input[name="mainForm:senha"]');
   }
 
-  getCampoCep(): Locator {
-    return this.page.locator('input[name="postalcode"]');
+
+  getCampoSenhaConfirmar(): Locator {
+    return this.page.locator('input[name="mainForm:passwordConfirmation"]');
   }
 
-  getBotaoBuscarCep(): Locator {
-    return this.page.locator('text=Buscar CEP');
+
+  getBotaoCriarcontaBtn(): Locator {
+    return this.page.locator('text=Criar conta');
   }
 
-  getCampoNumero(): Locator {
-    return this.page.locator('input[name="address-number"]');
+  getBotaoJaValidei(): Locator {
+    return this.page.locator('text=Ok, já validei');
   }
-
-  getCampoComplemento(): Locator {
-    return this.page.locator('input[name="address-details"]');
-  }
-
-  getCampoMetodoEntrega(): Locator {
-    return this.page.locator('img[alt="Van/Carro"]');
-  }
-
-  getCampoAnexo(): Locator {
-    return this.page.locator('input[type="file"]');
-  }
-
+  
 }

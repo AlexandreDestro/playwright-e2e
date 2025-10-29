@@ -14,20 +14,26 @@ export default class CadastroPage extends BasePage {
 
   async preencherFormulario(): Promise<void> {
     await this.bethaElements.getBotaoCriarconta().click();
-    await this.bethaElements.getCampoNomeUser().fill(faker.person.firstName());
-    await this.bethaElements.getCampoNome().fill(faker.person.firstName());
+    await this.bethaElements.getCampoNomeUser().fill(faker.person.firstName() + faker.person.firstName());
+    await this.bethaElements.getCampoNome().fill(faker.person.firstName() + faker.person.firstName());
     // await this.bethaElements.getCampoCpf().fill('33223745050');aa
     await this.bethaElements.getCampoEmail().fill(faker.internet.email());
+    const senha = faker.internet.password();
+    await this.bethaElements.getCampoSenha().fill(senha);
+    await this.bethaElements.getCampoSenhaConfirmar().fill(senha);
+    await this.bethaElements.getBotaoCriarcontaBtn().click();
+    await this.bethaElements.getBotaoJaValidei().click();
+
     // await this.bethaElements.getCampoWhatsapp().fill('48 999998888');
     // await this.bethaElements.getCampoCep().fill('88817070');
     // await this.bethaElements.getBotaoBuscarCep().click();
     // await this.bethaElements.getCampoNumero().fill('10');
     // await this.bethaElements.getCampoComplemento().fill(faker.word.words());
-    await this.bethaElements.getCampoMetodoEntrega().click();
-    await this.bethaElements
-      .getCampoAnexo()
-      .setInputFiles('src/support/fixtures/cnh_testes.jpg');
-    await this.bethaElements.getBotaoCriarconta().click();
+    // await this.bethaElements.getCampoMetodoEntrega().click();
+    // await this.bethaElements
+    //   .getCampoAnexo()
+    //   .setInputFiles('src/support/fixtures/cnh_testes.jpg');
+    // await this.bethaElements.getBotaoCriarconta().click();
   }
 
   // async preencherFormularioInvalido(): Promise<void> {

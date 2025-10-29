@@ -20,8 +20,8 @@ test.describe('Cadastro de usuário', () => {
     // await cadastroPage.validarCadastro();
   });
 
-  test('Preencher formulário de cadastro com dados inválidos', async () => {
-    // await cadastroPage.preencherFormularioInvalido();
-    // await cadastroPage.validarCNH();
-  });
+  // test('Preencher formulário de cadastro com dados inválidos', async () => {
+  //   // await cadastroPage.preencherFormularioInvalido();
+  //   // await cadastroPage.validarCNH();
+  // });
 });
