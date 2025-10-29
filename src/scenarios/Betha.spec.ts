@@ -17,7 +17,7 @@ test.describe('Cadastro de usuário', () => {
 
   test('Preencher formulário de cadastro', async () => {
     await bethaPage.preencherFormulario();
-    // await cadastroPage.validarCadastro();
+    // await cadastroPage.validarCadastro();aa
   });
 
   // test('Preencher formulário de cadastro com dados inválidos', async () => {
