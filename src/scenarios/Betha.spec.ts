@@ -3,7 +3,7 @@ import { TheConfig } from "sicolo";
 import BethaPage from "../support/pages/BethaPage";
 import { test, expect } from "../support/fixtures/zerostep.fixture";
 import { wait } from "../support/fixtures/time.fixture";
-
+//top
 test.describe("Cadastro de usuário", () => {
   const CONFIG = join(__dirname, "../support/fixtures/config.yml");
   let bethaPage: BethaPage;
