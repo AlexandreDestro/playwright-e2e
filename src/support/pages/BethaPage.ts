@@ -2,6 +2,10 @@ import { Page, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 import BethaElements from '../elements/BethaElements';
 import BasePage from './BasePage';
+//zerostep
+import { test as base } from '@playwright/test';
+import { aiFixture, type AiFixture } from '@zerostep/playwright';
+
 
 export default class CadastroPage extends BasePage {
   readonly bethaElements: BethaElements;

@@ -1,13 +1,14 @@
-import { test } from '@playwright/test';
-import { join } from 'path';
-import { TheConfig } from 'sicolo';
-import BethaPage from '../support/pages/BethaPage';
+import { join } from "path";
+import { TheConfig } from "sicolo";
+import BethaPage from "../support/pages/BethaPage";
+import { test, expect } from "../support/fixtures/zerostep.fixture";
 
-test.describe('Cadastro de usuário', () => {
-  const CONFIG = join(__dirname, '../support/fixtures/config.yml');
+test.describe("Cadastro de usuário", () => {
+  const CONFIG = join(__dirname, "../support/fixtures/config.yml");
   let bethaPage: BethaPage;
+
   const BASE_URL = TheConfig.fromFile(CONFIG)
-    .andPath('application.betha_url')
+    .andPath("application.betha_url")
     .retrieveData();
 
   test.beforeEach(async ({ page }) => {
@@ -15,13 +16,9 @@ test.describe('Cadastro de usuário', () => {
     await page.goto(BASE_URL);
   });
 
-  test('Preencher formulário de cadastro', async () => {
+  test("Preencher formulário de cadastro", async ({ ai }) => {
     await bethaPage.preencherFormulario();
-    // await cadastroPage.validarCadastro();aa
+    await ai("proceed in the page");
   });
 
-  // test('Preencher formulário de cadastro com dados inválidos', async () => {
-  //   // await cadastroPage.preencherFormularioInvalido();
-  //   // await cadastroPage.validarCNH();
-  // });
 });
