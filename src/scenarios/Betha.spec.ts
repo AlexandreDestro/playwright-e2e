@@ -2,6 +2,7 @@ import { join } from "path";
 import { TheConfig } from "sicolo";
 import BethaPage from "../support/pages/BethaPage";
 import { test, expect } from "../support/fixtures/zerostep.fixture";
+import { wait } from "../support/fixtures/time.fixture";
 
 test.describe("Cadastro de usuário", () => {
   const CONFIG = join(__dirname, "../support/fixtures/config.yml");
@@ -18,7 +19,8 @@ test.describe("Cadastro de usuário", () => {
 
   test("Preencher formulário de cadastro", async ({ ai }) => {
     await bethaPage.preencherFormulario();
-    await ai("proceed in the page");
+    await wait(1000);
+    await ai("click to report if a error apears");
   });
 
 });
