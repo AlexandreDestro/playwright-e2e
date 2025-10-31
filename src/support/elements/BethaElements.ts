@@ -41,5 +41,12 @@ export default class BethaElements extends BaseElements {
   getBotaoJaValidei(): Locator {
     return this.page.locator('text=Ok, já validei');
   }
-  
+
+//olha ai
+  getEmailErro(): Locator {
+    return this.page.locator('text=O e-mail informado não é válido.');
+  }
+  getSenhaErro(): Locator {
+    return this.page.locator('text=O campo "Senha" é obrigatório.');
+  }
 }

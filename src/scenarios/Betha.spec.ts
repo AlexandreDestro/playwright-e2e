@@ -17,10 +17,21 @@ test.describe("Cadastro de usuário", () => {
     await page.goto(BASE_URL);
   });
 
-  test("Preencher formulário de cadastro", async ({ ai }) => {
+  test("Preencher formulário de cadastro e reportar erro no final caso haja", async ({ ai }) => {
     await bethaPage.preencherFormulario();
-    await wait(1000);
+    // await wait(1000);
     await ai("click to report if a error apears");
   });
+
+  test("Preencher formulário com campo de E-mail inválido", async () => {
+    await bethaPage.preencherFormularioInvalidoEmail();
+    // await wait(8000);
+  });
+
+  test("Preencher formulário com campo de senha inválido", async () => {
+    await bethaPage.preencherFormularioInvalidoSenha();
+    // await wait(8000);
+  });
+
 
 });
