@@ -27,7 +27,7 @@ export default class CadastroPage extends BasePage {
     await this.bethaElements.getCampoSenhaConfirmar().fill(senha);
     await this.bethaElements.getBotaoCriarcontaBtn().click();
     await this.bethaElements.getBotaoJaValidei().click();
-    console.log("Formulário preenchido ✅");
+    console.log("Formulário preenchido e procedido ✅");
 
   }
 
