@@ -63,5 +63,19 @@ export default class CadastroPage extends BasePage {
     console.log("menssagem de erro de senha inválido encontrada ✅");
 
   }
+  
+  async preencherFormularioENaoRecebiAMensagem(): Promise<void> {
+    await this.bethaElements.getBotaoCriarconta().click();
+    await this.bethaElements.getCampoNomeUser().fill(faker.person.firstName() + faker.person.firstName());
+    await this.bethaElements.getCampoNome().fill(faker.person.firstName() + faker.person.firstName());
 
+    await this.bethaElements.getCampoEmail().fill(faker.internet.email());
+    const senha = faker.internet.password();
+    await this.bethaElements.getCampoSenha().fill(senha);
+    await this.bethaElements.getCampoSenhaConfirmar().fill(senha);
+    await this.bethaElements.getBotaoCriarcontaBtn().click();
+    await this.bethaElements.getNaoRecebiBotao().click();
+
+    console.log("Formulário preenchido e procedido ✅");
+  }
 }

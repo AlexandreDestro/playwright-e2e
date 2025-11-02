@@ -17,6 +17,13 @@ test.describe("Cadastro de usuário", () => {
     await page.goto(BASE_URL);
   });
 
+  test.afterEach(async ({ page }, testInfo) => {
+  await page.screenshot({
+    path: `screenshots/${testInfo.title.replace(/\s+/g, '_')}.png`,
+    fullPage: true
+  });
+  });
+
   test("Preencher formulário de cadastro e reportar erro no final caso haja", async ({ ai }) => {
     await bethaPage.preencherFormulario();
     // await wait(1000);
@@ -30,6 +37,11 @@ test.describe("Cadastro de usuário", () => {
 
   test("Preencher formulário com campo de senha inválido", async () => {
     await bethaPage.preencherFormularioInvalidoSenha();
+    // await wait(8000);
+  });
+
+  test("Preencher formulário e clicar em não recebi a mensagem", async () => {
+    await bethaPage.preencherFormularioENaoRecebiAMensagem();
     // await wait(8000);
   });
 

@@ -49,4 +49,9 @@ export default class BethaElements extends BaseElements {
   getSenhaErro(): Locator {
     return this.page.locator('text=O campo "Senha" é obrigatório.');
   }
+
+  getNaoRecebiBotao(): Locator {
+    return this.page.locator('text=Ainda não recebi a mensagem.');
+  }
+  
 }
