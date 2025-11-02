@@ -68,14 +68,17 @@ export default class CadastroPage extends BasePage {
     await this.bethaElements.getBotaoCriarconta().click();
     await this.bethaElements.getCampoNomeUser().fill(faker.person.firstName() + faker.person.firstName());
     await this.bethaElements.getCampoNome().fill(faker.person.firstName() + faker.person.firstName());
-
-    await this.bethaElements.getCampoEmail().fill(faker.internet.email());
+    const email = faker.internet.email();
+    await this.bethaElements.getCampoEmail().fill(email);
     const senha = faker.internet.password();
     await this.bethaElements.getCampoSenha().fill(senha);
     await this.bethaElements.getCampoSenhaConfirmar().fill(senha);
     await this.bethaElements.getBotaoCriarcontaBtn().click();
     await this.bethaElements.getNaoRecebiBotao().click();
-
-    console.log("Formulário preenchido e procedido ✅");
+    
+    await this.bethaElements.getCampoEmail().fill(email);
+    await this.bethaElements.getEnviarBotao().click();
+    
+    console.log("Email de verificação enviado ✅");
   }
 }

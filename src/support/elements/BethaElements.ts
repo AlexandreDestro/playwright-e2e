@@ -54,4 +54,10 @@ export default class BethaElements extends BaseElements {
     return this.page.locator('text=Ainda não recebi a mensagem.');
   }
   
+
+  getEnviarBotao(): Locator {
+    return this.page.locator('span.text.s16', { hasText: 'Enviar' });
+
+
+  }
 }
