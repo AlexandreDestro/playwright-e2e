@@ -32,17 +32,17 @@ test.describe("Cadastro de usuário", () => {
 
   test("Preencher formulário com campo de E-mail inválido", async () => {
     await bethaPage.preencherFormularioInvalidoEmail();
-    // await wait(8000);
+    
   });
 
   test("Preencher formulário com campo de senha inválido", async () => {
     await bethaPage.preencherFormularioInvalidoSenha();
-    // await wait(8000);
+    
   });
 
   test("Preencher formulário e clicar em não recebi a mensagem", async () => {
     await bethaPage.preencherFormularioENaoRecebiAMensagem();
-    // await wait(8000);
+    
   });
 
 
